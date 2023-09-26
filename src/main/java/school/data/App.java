@@ -22,39 +22,39 @@ public class App
 	 private static final Map<String, Integer> keywordCount = new HashMap<>(); // For counting the frequency
 
 	public static void main(String[] args) {
-//		// Define the name of output
-//        String outputFile = "merged.json";
-//        // Define the name of input
-//        String[] inputFiles = {"D:\\Database\\1.json", "D:\\Database\\2.json", "D:\\Database\\3.json"};
-//
-//        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
-//            writer.write("["); // the start [
-//
-//            boolean first = true;
-//
-//            for (String inputFile : inputFiles) {
-//                try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
-//                    // Read every line and add it in to new file
-//                    String line;
-//                    while ((line = reader.readLine()) != null) {
-//                        if (!first) {
-//                            writer.write(","); // add ","
-//                        } else {
-//                            first = false;
-//                        }
-//                        writer.newLine(); // Add new line
-//                        writer.write(line);
-//                    }
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//
-//            writer.newLine();
-//            writer.write("]"); // The end ]
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+		// Define the name of output
+        String outputFile = "D:\\Database\\merged.json";
+        // Define the name of input
+        String[] inputFiles = {"D:\\Database\\1.json", "D:\\Database\\2.json", "D:\\Database\\3.json"};
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
+            writer.write("["); // the start [
+
+            boolean first = true;
+
+            for (String inputFile : inputFiles) {
+                try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
+                    // Read every line and add it in to new file
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        if (!first) {
+                            writer.write(","); // add ","
+                        } else {
+                            first = false;
+                        }
+                        writer.newLine(); // Add new line
+                        writer.write(line);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            writer.newLine();
+            writer.write("]"); // The end ]
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         
 
 		
